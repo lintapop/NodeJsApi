@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <script>
+    axios.get('http://localhost:3000/api/product')
+      .then(res => { //200 ok
+        console.log(res);
+      })
+      .catch((err) => { //4,5 not ok
+
+      });
+  </script>
+</body>
+
+</html>
